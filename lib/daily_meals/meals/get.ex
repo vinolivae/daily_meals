@@ -2,7 +2,7 @@ defmodule DailyMeals.Meals.Get do
   @moduledoc """
   This module provides a function to get a meal.
   """
-  alias DailyMeals.{Meal, Repo}
+  alias DailyMeals.{Error, Meal, Repo}
 
   @doc """
   This function gets all meal.
@@ -15,7 +15,7 @@ defmodule DailyMeals.Meals.Get do
   @spec get_by_id(uuid :: String.t()) :: {:ok, %Meal{}} | {:error, String.t()}
   def get_by_id(uuid) do
     case Repo.get(Meal, uuid) do
-      nil -> {:error, "Meal not found"}
+      nil -> {:error, Error.build_not_found_error("Meal not found")}
       meal -> {:ok, meal}
     end
   end

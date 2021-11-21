@@ -2,7 +2,7 @@ defmodule DailyMeals.Meals.Create do
   @moduledoc """
   This module contains the Create Meal action.
   """
-  alias DailyMeals.{Meal, Repo}
+  alias DailyMeals.{Error, Meal, Repo}
 
   @doc """
   Creates a new meal.
@@ -16,5 +16,5 @@ defmodule DailyMeals.Meals.Create do
   end
 
   defp handle_insert({:ok, %Meal{}} = result), do: result
-  defp handle_insert({:error, reason}), do: {:bad_request, reason}
+  defp handle_insert({:error, result}), do: Error.build(:bad_request, result)
 end
