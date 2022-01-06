@@ -8,7 +8,7 @@ defmodule DailyMeals.Meals.Update do
   Update a meal.
   """
   @spec update(params :: map()) :: Meal.t()
-  def update(%{"id" => uuid} = params) do
+  def update(%{id: uuid} = params) do
     case Repo.get(Meal, uuid) do
       nil -> {:error, Error.build_not_found_error("Meal not found")}
       meal -> update(meal, params)
