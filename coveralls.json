@@ -1,0 +1,10 @@
+{
+    "skip_files": [
+        "test/support",
+        "lib/daily_meals/channels/user_socket.ex",
+        "lib/daily_meals/application.ex",
+        "lib/daily_meals.ex",
+        "lib/daily_meals/telemetry.ex",
+        "lib/daily_meals/views/error_helpers.ex"
+    ]
+}

@@ -24,6 +24,7 @@ defmodule DailyMeals.DataCase do
       import Ecto.Changeset
       import Ecto.Query
       import DailyMeals.DataCase
+      import DailyMeals.Factory
     end
   end
 
