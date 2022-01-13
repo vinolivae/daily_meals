@@ -1,7 +1,7 @@
 defmodule DailyMeals.Meal do
   use DailyMeals.Schema
 
-  @required [:description, :calories]
+  @optional [:description, :calories]
 
   schema "meals" do
     field :description, :string
@@ -10,10 +10,8 @@ defmodule DailyMeals.Meal do
     timestamps()
   end
 
+  @doc false
   def changeset(model \\ %__MODULE__{}, params) do
-    model
-    |> cast(params, @required)
-    |> validate_required(@required)
-    |> validate_length(:description, min: 3, max: 300)
+    cast(model, params, @optional)
   end
 end
