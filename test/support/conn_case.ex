@@ -23,6 +23,7 @@ defmodule DailyMealsWeb.ConnCase do
       import Plug.Conn
       import Phoenix.ConnTest
       import DailyMealsWeb.ConnCase
+      import DailyMeals.Factory
 
       alias DailyMealsWeb.Router.Helpers, as: Routes
 

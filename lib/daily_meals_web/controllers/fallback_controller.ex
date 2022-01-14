@@ -10,4 +10,11 @@ defmodule DailyMealsWeb.FallbackController do
     |> put_view(ErrorView)
     |> render("error.json", result: result)
   end
+
+  def call(conn, {:error, error}) do
+    conn
+    |> put_status(500)
+    |> put_view(ErrorView)
+    |> render("error.json", result: error)
+  end
 end
