@@ -9,6 +9,5 @@ defmodule DailyMeals.Repo.Migrations.AddMealTable do
 
       timestamps()
     end
-
   end
 end
