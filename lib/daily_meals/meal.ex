@@ -12,6 +12,8 @@ defmodule DailyMeals.Meal do
 
   @doc false
   def changeset(model \\ %__MODULE__{}, params) do
-    cast(model, params, @optional)
+    model
+    |> cast(params, @optional)
+    |> validate_length(:description, min: 3, max: 300)
   end
 end
