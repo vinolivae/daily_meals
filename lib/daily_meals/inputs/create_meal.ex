@@ -2,7 +2,7 @@ defmodule DailyMeals.Inputs.CreateMeal do
   @moduledoc """
   This module is used to create a new meal.
   """
-  use DailyMeals.Schema
+  use DailyMeals.ValueObjectSchema
 
   @required [:description]
   @optional [:calories]

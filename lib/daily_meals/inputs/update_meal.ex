@@ -3,11 +3,13 @@ defmodule DailyMeals.Inputs.UpdateMeal do
   This module is used to update a meal.
   """
 
-  use DailyMeals.Schema
+  use DailyMeals.ValueObjectSchema
 
+  @required [:id]
   @optional [:description, :calories]
 
   embedded_schema do
+    field :id, Ecto.UUID
     field :description, :string
     field :calories, :integer
   end
@@ -15,7 +17,8 @@ defmodule DailyMeals.Inputs.UpdateMeal do
   @doc false
   def changeset(model \\ %__MODULE__{}, params) do
     model
-    |> cast(params, @optional)
+    |> cast(params, @required ++ @optional)
+    |> validate_required(@required)
     |> validate_length(:description, min: 3, max: 300)
   end
 end
