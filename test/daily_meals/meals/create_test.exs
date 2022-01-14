@@ -15,12 +15,16 @@ defmodule DailyMeals.Meals.CreateTest do
     end
 
     test "Fails if params are invalid" do
-      params = %{description: "Um prato de arroz"}
+      params = %{description: "Um"}
 
       assert %Error{
                result: %Ecto.Changeset{
-                 changes: %{description: "Um prato de arroz"},
-                 errors: [calories: {"can't be blank", [validation: :required]}],
+                 changes: %{description: "Um"},
+                 errors: [
+                   description:
+                     {"should be at least %{count} character(s)",
+                      [count: 3, validation: :length, kind: :min, type: :string]}
+                 ],
                  valid?: false
                },
                status: :bad_request
