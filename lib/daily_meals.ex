@@ -8,10 +8,22 @@ defmodule DailyMeals do
   """
 
   alias DailyMeals.Meals.{Create, Delete, Get, Update}
+  alias DailyMeals.Users.Create, as: CreateUser
+  alias DailyMeals.Users.Delete, as: DeleteUser
+  alias DailyMeals.Users.Update, as: UpdateUser
+  alias DailyMeals.Users.Get, as: GetUser
 
+  # meal delegates
   defdelegate create(params), to: Create, as: :insert
   defdelegate delete(uuid), to: Delete
   defdelegate get_by_id(uuid), to: Get
   defdelegate get_all, to: Get
   defdelegate update(params), to: Update
+
+  # user delegates
+  defdelegate create_user(params), to: CreateUser, as: :insert
+  defdelegate delete_user(params), to: DeleteUser, as: :delete
+  defdelegate update_user(params), to: UpdateUser, as: :update
+  defdelegate get_user_by_id(uuid), to: GetUser, as: :get_by_id
+  defdelegate get_all_users, to: GetUser, as: :get_all
 end
