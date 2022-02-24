@@ -3,7 +3,7 @@ defmodule DailyMeals.Meal do
 
   alias DailyMeals.User
 
-  @inputed_params ~w(description calories)a
+  @inputted_params ~w(description calories)a
 
   schema "meals" do
     field :description, :string
@@ -16,7 +16,7 @@ defmodule DailyMeals.Meal do
   @doc false
   def changeset(model \\ %__MODULE__{}, params) do
     model
-    |> cast(params, @inputed_params)
+    |> cast(params, @inputted_params)
     |> validate_length(:description, min: 3, max: 300)
   end
 end

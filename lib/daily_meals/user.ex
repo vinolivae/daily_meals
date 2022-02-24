@@ -3,7 +3,7 @@ defmodule DailyMeals.User do
 
   alias DailyMeals.Meal
 
-  @inputed_params ~w(name cpf email)a
+  @inputted_params ~w(name cpf email)a
 
   schema "users" do
     field :name, :string
@@ -15,5 +15,5 @@ defmodule DailyMeals.User do
   end
 
   @doc false
-  def changeset(model \\ %__MODULE__{}, params), do: cast(model, params, @inputed_params)
+  def changeset(model \\ %__MODULE__{}, params), do: cast(model, params, @inputted_params)
 end
