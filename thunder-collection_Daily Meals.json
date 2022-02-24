@@ -1,0 +1,213 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Daily Meals",
+    "dateExported": "2022-02-24T01:38:50.105Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "containerId": "",
+            "sortNum": 10000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "eaedbc58-6f13-4e7a-a0cd-5bb18af32107",
+            "name": "Get User",
+            "url": "http://localhost:4000/api/users",
+            "method": "GET",
+            "modified": "2022-02-24T00:50:25.912Z",
+            "created": "2022-02-24T00:47:17.223Z",
+            "_id": "f31706be-7c12-44a6-9fc4-ee105db8e2c4",
+            "params": [],
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 20000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "eaedbc58-6f13-4e7a-a0cd-5bb18af32107",
+            "name": "Delete User",
+            "url": "http://localhost:4000/api/users/:id",
+            "method": "DELETE",
+            "modified": "2022-02-24T00:52:28.520Z",
+            "created": "2022-02-24T00:49:15.787Z",
+            "_id": "f2965045-4e1a-4ae9-a608-9c8723e5664f",
+            "params": [],
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 30000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "eaedbc58-6f13-4e7a-a0cd-5bb18af32107",
+            "name": "Create User",
+            "url": "http://localhost:4000/api/users",
+            "method": "POST",
+            "modified": "2022-02-24T00:52:08.702Z",
+            "created": "2022-02-24T00:44:38.914Z",
+            "_id": "675871aa-5d66-4057-abe4-9fca6e540840",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"User\",\n    \"cpf\": \"12345678911\",\n    \"email\": \"email\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 40000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "eaedbc58-6f13-4e7a-a0cd-5bb18af32107",
+            "name": "Update User",
+            "url": "http://localhost:4000/api/users",
+            "method": "PUT",
+            "modified": "2022-02-24T00:52:16.532Z",
+            "created": "2022-02-24T00:46:36.504Z",
+            "_id": "c56c471e-e4cc-496a-b10b-ffe40c971f76",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"id\": \"17128860-90f9-4b56-a6c8-763e59f689c8\",\n    \"name\": \"User Name\",\n    \"cpf\": \"12345678910\",\n    \"email\": \"email\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 50000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "eaedbc58-6f13-4e7a-a0cd-5bb18af32107",
+            "name": "Create Meal",
+            "url": "http://localhost:4000/api/meals",
+            "method": "POST",
+            "modified": "2022-02-24T00:54:31.110Z",
+            "created": "2022-02-24T00:54:08.096Z",
+            "_id": "616ab552-5c05-4617-bfb7-9e71151c7cff",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"description\": \"breakfast\", \n    \"calories\": 300\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 60000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "eaedbc58-6f13-4e7a-a0cd-5bb18af32107",
+            "name": "Update Meal",
+            "url": "http://localhost:4000/api/meals",
+            "method": "PUT",
+            "modified": "2022-02-24T00:55:26.984Z",
+            "created": "2022-02-24T00:55:11.062Z",
+            "_id": "22d0787f-100e-4bbd-ac2a-6d87c4082616",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"calories\": 500,\n    \"description\": \"breakfast\",\n    \"id\": \"46e69caa-719b-458e-ba99-f75181a97fca\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 70000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "eaedbc58-6f13-4e7a-a0cd-5bb18af32107",
+            "name": "Get Meal",
+            "url": "http://localhost:4000/api/meals",
+            "method": "GET",
+            "modified": "2022-02-24T00:56:29.204Z",
+            "created": "2022-02-24T00:55:51.953Z",
+            "_id": "1d6e9df3-6638-48fa-a259-0e1b8e6d8bba",
+            "params": [],
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 80000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "eaedbc58-6f13-4e7a-a0cd-5bb18af32107",
+            "name": "Delete Meal",
+            "url": "http://localhost:4000/api/meals",
+            "method": "GET",
+            "modified": "2022-02-24T00:57:02.684Z",
+            "created": "2022-02-24T00:55:51.953Z",
+            "_id": "5ab34600-ebce-4d91-a97b-433ca67b4b42",
+            "params": [],
+            "tests": []
+        }
+    ]
+}
