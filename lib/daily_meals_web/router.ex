@@ -15,6 +15,14 @@ defmodule DailyMealsWeb.Router do
       get "/:id", MealsController, :show_meal
       delete "/:id", MealsController, :delete_meal
     end
+
+    scope "/users" do
+      post "/", UsersController, :create_user
+      get "/", UsersController, :list_all_users
+      put "/", UsersController, :update_user
+      get "/:id", UsersController, :show_user
+      delete "/:id", UsersController, :delete_user
+    end
   end
 
   # Enables the Swoosh mailbox preview in development.
