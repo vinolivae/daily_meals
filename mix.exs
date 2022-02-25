@@ -46,7 +46,7 @@ defmodule DailyMeals.MixProject do
       {:argon2_elixir, "~> 2.4"},
       {:excoveralls, "~> 0.10", only: :test},
       {:ex_machina, "~> 2.7.0"},
-      {:credo, "~> 1.5", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 
