@@ -10,8 +10,8 @@ defmodule DailyMeals do
   alias DailyMeals.Meals.{Create, Delete, Get, Update}
   alias DailyMeals.Users.Create, as: CreateUser
   alias DailyMeals.Users.Delete, as: DeleteUser
-  alias DailyMeals.Users.Update, as: UpdateUser
   alias DailyMeals.Users.Get, as: GetUser
+  alias DailyMeals.Users.Update, as: UpdateUser
 
   # meal delegates
   defdelegate create(params), to: Create, as: :insert

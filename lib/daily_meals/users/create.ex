@@ -1,5 +1,5 @@
 defmodule DailyMeals.Users.Create do
-  alias DailyMeals.{Error, User, Repo}
+  alias DailyMeals.{Error, Repo, User}
 
   @doc """
   Creates a new user.

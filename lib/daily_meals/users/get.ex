@@ -1,5 +1,5 @@
 defmodule DailyMeals.Users.Get do
-  alias DailyMeals.{Error, User, Repo}
+  alias DailyMeals.{Error, Repo, User}
 
   def get_all, do: Repo.all(User) |> Enum.map(&Repo.preload(&1, :meals))
 

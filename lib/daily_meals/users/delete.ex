@@ -1,5 +1,5 @@
 defmodule DailyMeals.Users.Delete do
-  alias DailyMeals.{Error, User, Repo}
+  alias DailyMeals.{Error, Repo, User}
 
   @spec delete(uuid :: String.t()) :: User.t() | Error.t()
   def delete(uuid) do

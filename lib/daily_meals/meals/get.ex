@@ -12,7 +12,7 @@ defmodule DailyMeals.Meals.Get do
   @doc """
   this function gets a meal by id.
   """
-  @spec get_by_id(uuid :: String.t()) :: {:ok, %Meal{}} | {:error, String.t()}
+  @spec get_by_id(uuid :: String.t()) :: {:ok, Meal.t()} | {:error, String.t()}
   def get_by_id(uuid) do
     case Repo.get(Meal, uuid) do
       nil -> {:error, Error.build_not_found_error("Meal not found")}

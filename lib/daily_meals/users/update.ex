@@ -1,5 +1,5 @@
 defmodule DailyMeals.Users.Update do
-  alias DailyMeals.{Error, User, Repo}
+  alias DailyMeals.{Error, Repo, User}
 
   def update(%{id: uuid} = params) do
     case Repo.get(User, uuid) do
