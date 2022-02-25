@@ -1,6 +1,8 @@
 defmodule DailyMealsWeb.UsersView do
   use DailyMealsWeb, :view
 
+  alias DailyMealsWeb.MealsView
+
   def render("create.json", %{user: user}) do
     %{
       message: "User Created",
@@ -18,7 +20,8 @@ defmodule DailyMealsWeb.UsersView do
       id: user.id,
       name: user.name,
       cpf: user.cpf,
-      email: user.email
+      email: user.email,
+      meals: render_many(user.meals, MealsView, "show.json", as: :meal)
     }
   end
 

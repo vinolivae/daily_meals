@@ -3,7 +3,7 @@ defmodule DailyMeals.Meal do
 
   alias DailyMeals.User
 
-  @inputted_params ~w(description calories)a
+  @inputted_params ~w(description calories user_id)a
 
   schema "meals" do
     field :description, :string

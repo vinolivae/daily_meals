@@ -47,25 +47,29 @@ defmodule DailyMealsWeb.UsersControllerTest do
                    "name" => "zé",
                    "email" => "ze@email",
                    "cpf" => "12345678901",
-                   "id" => _
+                   "id" => _,
+                   "meals" => []
                  },
                  %{
                    "name" => "zé",
                    "email" => "ze@email",
                    "cpf" => "12345678901",
-                   "id" => _
+                   "id" => _,
+                   "meals" => []
                  },
                  %{
                    "name" => "zé",
                    "email" => "ze@email",
                    "cpf" => "12345678901",
-                   "id" => _
+                   "id" => _,
+                   "meals" => []
                  },
                  %{
                    "name" => "zé",
                    "email" => "ze@email",
                    "cpf" => "12345678901",
-                   "id" => _
+                   "id" => _,
+                   "meals" => []
                  }
                ]
              } =
@@ -126,7 +130,8 @@ defmodule DailyMealsWeb.UsersControllerTest do
                "name" => "zé",
                "email" => "ze@email",
                "cpf" => "12345678901",
-               "id" => _
+               "id" => _,
+               "meals" => []
              } =
                ctx.conn
                |> get("/api/users/#{user.id}")

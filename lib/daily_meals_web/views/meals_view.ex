@@ -7,7 +7,8 @@ defmodule DailyMealsWeb.MealsView do
       meal: %{
         id: meal.id,
         description: meal.description,
-        calories: meal.calories
+        calories: meal.calories,
+        user: meal.user_id
       }
     }
   end
@@ -16,7 +17,8 @@ defmodule DailyMealsWeb.MealsView do
     %{
       id: meal.id,
       description: meal.description,
-      calories: meal.calories
+      calories: meal.calories,
+      user: meal.user_id
     }
   end
 

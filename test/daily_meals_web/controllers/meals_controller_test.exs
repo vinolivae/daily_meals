@@ -7,17 +7,26 @@ defmodule DailyMealsWeb.MealsControllerTest do
 
   describe "/api/meals/" do
     test "successfully creates a meal if parameters are valid", ctx do
+      user = insert(:user)
+
       assert %{
                "meal" => %{
                  "calories" => 300,
                  "description" => "almoço",
-                 "id" => _
+                 "id" => _,
+                 "user" => user_id
                },
                "message" => "Meal created"
              } =
                ctx.conn
-               |> post("/api/meals", %{"description" => "almoço", "calories" => 300})
+               |> post("/api/meals", %{
+                 "description" => "almoço",
+                 "calories" => 300,
+                 "user_id" => user.id
+               })
                |> json_response(201)
+
+      assert user.id == user_id
     end
 
     test "fails if parameters are invalid", ctx do

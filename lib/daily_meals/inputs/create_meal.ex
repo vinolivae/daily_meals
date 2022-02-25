@@ -4,10 +4,11 @@ defmodule DailyMeals.Inputs.CreateMeal do
   """
   use DailyMeals.ValueObjectSchema
 
-  @required [:description]
+  @required [:description, :user_id]
   @optional [:calories]
 
   embedded_schema do
+    field :user_id, Ecto.UUID
     field :description, :string
     field :calories, :integer
   end
