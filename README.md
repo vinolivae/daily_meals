@@ -5,7 +5,7 @@ this project aims to practice knowledge acquired about API development using pho
 It consist of an API that allows the user to register daily meals. Each meal has a name 
 and calories. This can be very useful for people who need to keep a diet. =)
 
-Try it using the collection named as thunder-collection_Daily Meals.json
+Try it using the collection named as collection.md.
 
 To start your Phoenix server:
 
