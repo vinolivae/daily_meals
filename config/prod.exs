@@ -16,6 +16,19 @@ config :daily_meals, DailyMealsWeb.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
+database_url =
+  System.get_env("DATABASE_URL") ||
+    raise """
+    environment variable DATABASE_URL is missing.
+    For example: ecto://USER:PASS@HOST/DATABASE
+    """
+
+config :daily_meals, DailyMeals.Repo,
+  url: database_url,
+  database: "",
+  show_sensitive_data_on_connection_error: true,
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
